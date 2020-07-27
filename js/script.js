@@ -11,26 +11,27 @@ while (numeriRandom.length < 5) {
     i++;
 };
 
-console.log(numeriRandom);
+alert(numeriRandom);
 
-
-while (numeriScelti.length < 5) {
-    var numeroUtente = parseInt(prompt("Inserisci un numero da 0 a 100"));
-    if (!numeriScelti.includes(numeroUtente) && numeroUtente >= 0 && numeroUtente <= 100) {
-        numeriScelti.push(numeroUtente);
-    } else if (numeroUtente < 0 || numeroUtente > 100) {
-            alert("Numero non valido!")
-        } else if (numeroUtente == numeriScelti[i]) {
-            alert ("Numero già scelto!")
-        } else if (isNaN(numeroUtente)) {
-            alert ("Inserisci un numero!");
+setTimeout(function(){
+    while (numeriScelti.length < 5) {
+        var numeroUtente = parseInt(prompt("Inserisci un numero da 0 a 100"));
+        if (!numeriScelti.includes(numeroUtente) && numeroUtente >= 0 && numeroUtente <= 100) {
+            numeriScelti.push(numeroUtente);
+        } else if (numeroUtente < 0 || numeroUtente > 100) {
+                alert("Numero non valido!")
+            } else if (numeroUtente == numeriScelti[i]) {
+                alert ("Numero già scelto!")
+            } else if (isNaN(numeroUtente)) {
+                alert ("Inserisci un numero!");
+            }
+        if (numeriRandom.includes(numeroUtente)) {
+            numeriGiusti.push(numeroUtente);
         }
-    if (numeriRandom.includes(numeroUtente)) {
-        numeriGiusti.push(numeroUtente);
+        i++;
     }
-    i++;
-}
-
+    alert("Hai indovinato " + numeriGiusti.length + " numeri!")
+}, 5000);
 console.log(numeriScelti);
 console.log(numeriGiusti);
 
