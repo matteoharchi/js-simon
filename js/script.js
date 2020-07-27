@@ -30,10 +30,8 @@ setTimeout(function(){
         }
         i++;
     }
-    alert("Hai indovinato " + numeriGiusti.length + " numeri!")
-}, 5000);
-console.log(numeriScelti);
-console.log(numeriGiusti);
+    alert("Hai indovinato " + numeriGiusti.length + " numeri:" + numeriGiusti)
+}, 30000);
 
 // FUNZIONI
 
